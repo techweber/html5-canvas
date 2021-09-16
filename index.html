@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Canvas</title>
+    <style>
+      canvas {
+        background-color: lightgray;
+        border: 5px solid darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML5 Canvas</h1>
+    <canvas id="myCanvas" width="400" height="400">
+      Sorry, your browser does not support the Canvas element. You're missing out.
+    </canvas>
+    <script>
+      var canvas = document.querySelector("#myCanvas");
+      var context = canvas.getContext("2d");
+
+      // Water
+      context.beginPath();
+      context.moveTo(0,300);
+      context.lineTo(400,300);
+      context.stroke();
+
+      // Sail
+      context.beginPath();
+      context.moveTo(155,150);
+      context.lineTo(220,270);
+      context.lineTo(90,270);
+      context.lineTo(155,150);
+      context.stroke();
+
+      // burgee
+      context.beginPath();
+      context.lineTo(145,110);
+      context.lineTo(145,140);
+      context.lineTo(110,125);
+      context.closePath();
+      context.stroke();
+
+
+    </script>
+  </body>
+</html>
